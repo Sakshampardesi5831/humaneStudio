@@ -17,15 +17,36 @@ html,body{
     width: 100%;
     height: 100%;
 }
+#minicircle{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99999;
+    background-color:#fff;
+
+}
+/*------------------------extra css for h1 effect------------------------------------------*/
+.bounding{
+    width: fit-content;
+    /* background-color: red; */
+    overflow: hidden;
+}
+.boundingelem{
+    transform: translateY(100%);
+}
+/*---------------------------------------------------------------------------*/
 #main{
     width: 100%;
     background-color: #000;
 }
 
 #hero{
+    position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #000;
+    /* background-color: #000; */
     color: white;
 }
 #nav{
@@ -58,16 +79,24 @@ html,body{
   margin-left: 230px;
 }
 .blockText{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     width: fit-content;
+    /* background-color: red; */
 }
 .blockText h5{
-    text-align: right;
+    /* text-align: right; */
     font-family: font2;
     text-transform: uppercase;
     opacity: 0.6;
     font-size: 16px;
+    /* background-color: yellow; */
 }
 #chotiheadings{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     margin-top: 100px;
     padding-right: 30px;
 }
@@ -124,7 +153,7 @@ html,body{
 .elem{
     position: relative;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     border-top: 1px solid #888;
     width: 100%;
@@ -143,11 +172,11 @@ html,body{
     position: absolute;
     z-index: 999;
     height: 140%;
-    display: none;
+    opacity: 0;
 }
 #about{
     width: 100%;
-    background-color: #000;
+    /* background-color: #000; */
     padding: 10vw 5vw;
     padding-left: 40vw;
     color: #fff;
@@ -177,4 +206,41 @@ html,body{
     text-decoration: none;
     border-radius: 100px;
     font-size: 12px;
+    color: #fff;
+}
+#subscribe{
+    color: #fff;
+    padding: 30px 20px;
+    padding-bottom: 6vw;
+}
+#subscribe h5{
+    text-transform: uppercase;
+    opacity: 0.6;
+
+}
+#subscribe h3{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+}
+#footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    gap: 30px;
+    color: #fff;
+}
+#footerleft{
+    display: flex;
+    gap: 20px;
+}
+#footerright a{
+    text-decoration: none;
+    color: #fff;
+}
+#footerright{
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
 }
